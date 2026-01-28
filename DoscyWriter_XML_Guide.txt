@@ -1,0 +1,278 @@
+NOTE: 
+	- All comments will be after "//" to denote a comment
+	- User entered data will be marked as "UE"
+	- Self explanatory tags will be marked with "SE"
+	- All strings/text follow this format "<![CDATA[string]]" - Ints dont need it
+	- Defualt Time: 0001-01-01
+	- Default Date: 00:00:00
+	- Handling Bold/Italics/Underline/Strikethrough - keep that order in text for consistency sake
+		> Bold: <![CDATA[text[b]boldtext[/b]text]]>
+		> Italics: <![CDATA[text[i]italicstext[/i]text]]>
+		> Underline: <![CDATA[text[u]underlinetext[/u]text]]>
+		> Strikethrough: <![CDATA[text[s]strikedtext[/s]text]]>
+		> All: <![CDATA[text[b][i][u][s]affectedtext[/b][/i][/u][/s]text]]>
+	- Whole project is within a <YWRITER7> tag as such: <YWRITER7>everything</YWRITER7>
+
+Project Header - Under Project Settings
+	<PROJECT>	// Header Start
+		<Ver>7</Ver>		// yWriter main version
+		<SavedWith>7.1.2.4</SavedWith>		 // yWriter exact version - Dont need to worry about
+		<SavedOn>2025-05-22 10:20:56</SavedOn>	// SE - Grab user machine datetime and updates when importing
+		<Title><![CDATA[TESTER PROJECT]]></Title>		// SE UE under project tab
+		<AuthorName><![CDATA[TONY PESCY]]></AuthorName>	// SE UE under author tab
+		<Bio><![CDATA[This is my bio!]]></Bio>			// SE UE under author tab
+		<Desc><![CDATA[Project desc]]></Desc>			// SE UE under project tab
+		// Rating Names tabs > all UE > Ratings used in scenes later
+		<FieldTitle1><![CDATA[Relevance]]></FieldTitle1>
+		<FieldTitle2><![CDATA[Tension]]></FieldTitle2>
+		<FieldTitle3><![CDATA[Humour]]></FieldTitle3>
+		<FieldTitle4><![CDATA[Quality]]></FieldTitle4>
+		<LastFullBackup>2025-05-22</LastFullBackup>
+		<WordTarget>0</WordTarget>	// SE UE > Found in Tools/WordCountTarget
+		<WordTargetStartDate>0001-01-01</WordTargetStartDate>	// SE UE > Found in Tools/WordCountTarget
+		<WordTargetEndDate>0001-01-01</WordTargetEndDate>	// SE UE > Found in Tools/WordCountTarget
+		<WordCountStart>0</WordCountStart>	// SE UE > Found in Tools/WordCountTarget
+		<EndFrontMatterChID>0</EndFrontMatterChID>
+		<EndMiddleChID>0</EndMiddleChID>
+		<EndBeginningChID>0</EndBeginningChID>
+		<LatexSingleQuotes>0</LatexSingleQuotes>		// 0 is a boolean value in LaTeX/PDF
+		<LatexSuppressChapterTitles>0</LatexSuppressChapterTitles>	// 0 is a boolean value in LaTeX/PDF
+		<LatexSceneDivider></LatexSceneDivider>		// SE UE
+		<HtmlSceneDivider></HtmlSceneDivider>		// SE UE
+		<HtmlEncoding>utf8</HtmlEncoding>			// SE UE
+		<HtmlUnicode>-1</HtmlUnicode>				// SE UE > (-1 is true???? and 0 is false)
+		<LaTeXHeaderFile><![CDATA[]]></LaTeXHeaderFile>		// Cannot find in project settings
+		<MRUSpecificDate>0001-01-01</MRUSpecificDate>		// Cannot find in project settings
+		<MRUSpecificTime>00:00:00</MRUSpecificTime>			// Cannot find in project settings
+		<LastViewedScID>2</LastViewedScID>			// SE - We should leave this alone
+		// UE deadline ending dates
+		<DeadlineDate1>2025-09-10</DeadlineDate1>		// Outline
+		<DeadlineDate2>0001-01-01</DeadlineDate2>		// Draft
+		<DeadlineDate3>0001-01-01</DeadlineDate3>		// 1st Edit
+		<DeadlineDate4>0001-01-01</DeadlineDate4>		// 2nd Edit
+		<DeadlineDate5>0001-01-01</DeadlineDate5>		// Final Edit
+		// UE deadline starting dates
+		<DeadlineStartDate1>2025-05-22</DeadlineStartDate1>		// Outline
+		<DeadlineStartDate2>0001-01-01</DeadlineStartDate2>		// Draft
+		<DeadlineStartDate3>0001-01-01</DeadlineStartDate3>		// 1st Edit
+		<DeadlineStartDate4>0001-01-01</DeadlineStartDate4>		// 2nd Edit
+		<DeadlineStartDate5>0001-01-01</DeadlineStartDate5>		// Final Edit
+		<Fields>	// Fields here are used for exporting to LaTeX/PDF and RTF/DOCX files
+			<Field_LatexSuppressEarlyPageNums>0</Field_LatexSuppressEarlyPageNums>		// 0 is a boolean value
+			<Field_LatexSuppressAuthorAndTitle>0</Field_LatexSuppressAuthorAndTitle>	// 0 is boolean value
+			<Field_RTFSceneDivider>* * *</Field_RTFSceneDivider>
+			<Field_DocxSceneDivider>* * *</Field_DocxSceneDivider>
+			<Field_PlainTextMode>0</Field_PlainTextMode>
+		</Fields>
+	</PROJECT>	
+// Header End 
+
+// Locations Start - In locations tab
+<LOCATIONS>
+	<LOCATION>
+		<ID>3</ID>												// SE > ID created when location was created
+		<Title><![CDATA[New Jersey]]></Title>					// SE UE
+		<Desc><![CDATA[The wastelands to the East]]></Desc>		// SE UE
+		<Tags><![CDATA[bad, smelly, trashcan]]></Tags>			// SE UE
+		<SortOrder>1</SortOrder>								// States where it currently in the list - List is actually based on where the location actually is in the code
+		<AKA><![CDATA[trash heap; garbagio]]></AKA>				// SE UE
+	</LOCATION>
+
+	<LOCATION>
+		<ID>1</ID>
+		<Title><![CDATA[Eagleswatch]]></Title>										// SE UE
+		<Desc><![CDATA[Icy tundra city]]></Desc>									// SE UE
+		<ImageFile><![CDATA[GYATTTTTTaFTERmOTORCYCLEaCCIDENT.JPG]]></ImageFile>		// SE UE > User inputted image for this location
+		<SortOrder>2</SortOrder>													// States where it currently in the list - List is actually based on where the location actually is in the code
+		<AKA><![CDATA[the cold northern Bastion; home of the icewinds]]></AKA>		// SE UE
+	</LOCATION>
+
+	<LOCATION>
+		<ID>2</ID>											// SE > ID created when location was created
+		<Title><![CDATA[Tizen]]></Title>					// SE UE
+		<Desc><![CDATA[Home of the lord general]]></Desc>	// SE UE
+		<SortOrder>3</SortOrder>							// States where it currently in the list - List is actually based on where the location actually is in the code
+		<AKA><![CDATA[Tizi]]></AKA>							// SE UE
+	</LOCATION>
+</LOCATIONS>
+// Location End	
+	
+// Items Start - In items tab
+<ITEMS>
+	<ITEM>
+		<ID>1</ID>																		// SE > ID created when location was created
+		<Title><![CDATA[Darkmoon Blade]]></Title>										// SE UE
+		<Desc><![CDATA[30 proof of concord kept well spent]]></Desc>					// SE UE
+		<Tags><![CDATA[sword, magic]]></Tags>											// SE UE
+		<ImageFile><![CDATA[photomode_15032024_125509.png]]></ImageFile>				// SE UE > User inputted image for this item
+		<SortOrder>1</SortOrder>														// States where it currently in the list - List is actually based on where the item actually is in the code
+		<AKA><![CDATA[goated blaade; i love sirris the sunless and yorshka]]></AKA>		// SE UE
+	</ITEM>
+	
+	<ITEM>
+		<ID>2</ID>															// SE > ID created when location was created
+		<Title><![CDATA[Astors Spear]]></Title>								// SE UE
+		<Desc><![CDATA[Rotten spear smeared with the poo poo]]></Desc>		// SE UE
+		<Tags><![CDATA[spear, poisoned]]></Tags>							// SE UE
+		<SortOrder>2</SortOrder>											// States where it currently in the list - List is actually based on where the item actually is in the code
+		<AKA><![CDATA[rotten spear; pikes pike]]></AKA>						// SE UE
+	</ITEM>
+</ITEMS>
+// Items End
+
+// Characters Start - In characters tab
+// NOTE: Despite sort order existing, the characters must be placed in order in this listing
+<CHARACTERS>
+	<CHARACTER>
+		<ID>3</ID>													// UE > Number generated when char is created
+		<Title><![CDATA[Asa]]></Title>								// UE > Short Name of character
+		<Desc><![CDATA[-Catkin (claws, fangs, tail)]]></Desc>		// UE SE > character description 
+		<Notes><![CDATA[-Troubled past								// UE SE > Notes added for character (NOTICE: multiple lines are added as new lines within the section)
+-Cheery
+-Flirty]]></Notes>
+		<SortOrder>1</SortOrder>									// This is how the characters are ordered, is changed when characters are moved in the list
+		<AKA><![CDATA[Zuzu, Zu]]></AKA>								// UE SE > Character nicknames
+		<Bio><![CDATA[Asa Zuzu was a hunter for his whole childhood until his parents were killed in an accident.]]></Bio>	// UE SE > Chaarcter bio
+		<Goals><![CDATA[Wants a new "Family" and to get rich and support his siblings.  He also wants to enjoy the finer things in life.]]></Goals>		// UE SE > character goals
+		<FullName><![CDATA[Asa Zuzu]]></FullName>			// UE SE > Full name of character
+	</CHARACTER>
+
+	<CHARACTER>			// All are same as above unless noted as otherwise
+		<ID>5</ID>
+		<Title><![CDATA[Ires]]></Title>
+		<Desc><![CDATA[-Celestial
+-Sleeper build]]></Desc>
+		<Notes><![CDATA[-Youngest daughter of the god of chaos (Oreius)
+-Very proud
+-Wants to prove herself to her father and rest of her family]]></Notes>
+		<SortOrder>2</SortOrder>
+		<AKA><![CDATA[Daughter of Chaos]]></AKA>
+		<Goals><![CDATA[Wishes to climb the ranks of her family.]]></Goals>
+		<FullName><![CDATA[Ireseel]]></FullName>
+		<Major>-1</Major>		// Major tag denotes whether character is selected as major - If blank then character is minor
+	</CHARACTER>
+</CHARACTERS>
+// Characters End
+
+// Project Notes Start
+// NOTE: The order of these notes cannot be changed in the software so we should just not allow the id to change
+<PROJECTNOTES>
+	<PROJECTNOTE>
+		<ID>1</ID>		// SE > ID generated when note was made - Order does not change this
+		<Title><![CDATA[project note 1]]></Title>			// UE SE > Title
+		<Desc><![CDATA[i made this one first!!!]]></Desc>	// UE SE > Content
+	</PROJECTNOTE>
+
+	<PROJECTNOTE>	// SAME AS ABOVE
+		<ID>2</ID>
+		<Title><![CDATA[Second entry]]></Title>
+		<Desc><![CDATA[this was made second!]]></Desc>
+	</PROJECTNOTE>
+
+</PROJECTNOTES>
+// Project Notes End
+
+// Project Variable Start
+// Most of these have to do with exporting, IDK if we should worry about this since we wont be exporting in those methods
+// Will discuss further with group if this is needed
+<PROJECTVARS>
+	<PROJECTVAR>
+		<ID>1</ID>
+		<Title><![CDATA[project var 1]]></Title>
+		<Desc><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\f0\fs20 this is my text or value\f1\par
+}
+]]></Desc>
+		<Tags><![CDATA[0]]></Tags>
+	</PROJECTVAR>
+
+	<PROJECTVAR>
+		<ID>2</ID>
+		<Title><![CDATA[proj var 2]]></Title>
+		<Desc><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Segoe UI;}}
+{\*\generator Riched20 10.0.26100}\viewkind4\uc1 
+\pard\f0\fs20 done when it is exported to HTML\f1\par
+}
+]]></Desc>
+		<Tags><![CDATA[1]]></Tags>
+		<AKA><![CDATA[Only when exporting to Html]]></AKA>
+	</PROJECTVAR>
+
+</PROJECTVARS>
+// Project Variables End
+
+// Project Exps Start??
+// Could not find where this changed or anything. May have to do with project exports?
+// I tried exports but it didnt change anything?
+// Export also did not let me open the file so idek
+// Skipping for now
+<PROJECTEXPS>
+</PROJECTEXPS>
+// Project Exps End
+
+// Scenes Start
+<SCENE>
+		<ID>5</ID>							// Scene id -  generated when scene is created = current # of scenes + 1
+		<Title><![CDATA[Escape]]></Title>	// Scene title
+		<Tags><![CDATA[tag!]]></Tags>		// UE > Tags for scene - is not present if tags are not added
+		<Fields>
+			<Field_UseExporterTags>0</Field_UseExporterTags>
+		</Fields>
+
+		<BelongsToChID>1</BelongsToChID>		// UE SE > What chapter scene  belongs to
+		<Goal><![CDATA[escaping duh]]></Goal>					// UE SE > Goal (Action Scene) is replaced with Reaction for reaction scene
+		<Conflict><![CDATA[guards and shiettt]]></Conflict>		// UE SE > Conflict (Action Scene) is replaced with Dilemma for reaction scene
+		<Outcome><![CDATA[he escapes]]></Outcome>				// UE SE > Outcome (Action Scene) is replaced with Choice for reaction scene
+		<Field1>8</Field1>					// UE > Ratings out of ten (1<=X<=10)for fields created by user earlier
+		<Field2>5</Field2>					// UE > Ratings out of ten (1<=X<=10)for fields created by user earlier
+		<Field3>1</Field3>					// UE > Ratings out of ten (1<=X<=10)for fields created by user earlier
+		<Field4>10</Field4>					// UE > Ratings out of ten (1<=X<=10)for fields created by user earlier
+		<SubPlot>-1</SubPlot>				// IF this exists then it is set to -1, otherwise it will not exist and default to normal plot
+		<Status>1</Status>					// UE > Status from 1 to 5 (1<=X<=5) for outline, draft, 1st edit, 2nd edit, and done
+		<WordCount>636</WordCount>			// SE
+		<LetterCount>3481</LetterCount>		// SE
+		<Characters>						// Lists character ids of all characters in chapter
+			<CharID>6</CharID>				// Chaarcter ID of present character
+		</Characters>
+		<Locations>							// Lists location ids of all location in chapter
+			<LocID>3</LocID>				// location ID of present character
+		</Locations>	
+		<Items>								// Lists item ids of all items in chapter
+			<ItemID>2</ItemID>				// item ID of present character
+		</Items>					
+		<SceneContent><![CDATA[Garres' fingertips were raw and bleeding as he slunk down from the roof of the building. As he walked he poured some of his health potion onto his aching fingers, sighing as the liquid burned away the pain.  He ignored the lingering stares as he walked among the city goers, to them he must have looked like some kind of outlaw.  He could not blame them, they were right after all.  [i]"Once I enter the tavern, my darkness will dispell,"[/i] he thought to himself, [i]"I'll have to be quick to beat the guards to gatehouse."[/i]
+...
+He continued down the path until he could no longer see the gate of the city and immediately turned into the forest.  Finally, unable to go on any longer into the night, he stopped beneath a tree with the trunk four times as thick as he was.  The moon provided plenty of light for his infernal eyes to see as if it was day.  He set his bags done against the hard bark and laid his cloak on top before popping the cork on one of the bottles of wine.  He watched and listened to the forest nymphs as they all eyed him from afar.  They were not used to see any kind of humans, let alone an infernal, this deep in these woods.  Finally the wine started to take affect as he slowly lost the battle against his heavy eyelids.
+]]></SceneContent>		// UE SE > actual scene
+	</SCENE>
+
+	<SCENE>			// Same as before for most
+		<ID>6</ID>									// ID that is generated when this scene is created
+		<Title><![CDATA[The Lost Woods]]></Title>	// SE UE 
+		<Unused>-1</Unused>							// Denotes that this is in the trash chapter
+		<Fields>
+			<Field_UseExporterTags>0</Field_UseExporterTags>	// worries about exporting - ignored for now
+		</Fields>
+
+		<BelongsToChID>11</BelongsToChID>			// What chapter it belongs to - Here it is referencing the trash chapter which is alwyas # of chapters +1
+		<Field1>1</Field1>
+		<Field2>1</Field2>
+		<Field3>1</Field3>
+		<Field4>1</Field4>
+		<Status>1</Status>
+		<WordCount>0</WordCount>
+		<LetterCount>0</LetterCount>
+		<Characters>
+		</Characters>
+		<Locations>
+		</Locations>
+		<Items>
+		</Items>
+		<SceneContent><![CDATA[
+]]></SceneContent>
+	</SCENE>
+</SCENES>	
+// Scenes End
+
+// Chapters Start

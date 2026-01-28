@@ -1,0 +1,5 @@
+# Ignore Environmental Variables
+*.env
+
+# Ignore Test Files
+*Test.cpp
