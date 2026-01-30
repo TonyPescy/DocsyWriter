@@ -276,3 +276,60 @@ He continued down the path until he could no longer see the gate of the city and
 // Scenes End
 
 // Chapters Start
+<CHAPTERS>
+	<CHAPTER>									// Individual Chapter Start
+		<ID>1</ID>								// SE - ID is generated upon chapter creation
+		<Title><![CDATA[Chapter 1]]></Title>	// UE SE
+		<Desc><![CDATA[DESC!!!!]]></Desc>		// UE SE
+		<Unused>-1</Unused>						// UE SE - Optional tag that user must select through right clicking. Only shown when marked as unused, notes, or todo
+		<SortOrder>1</SortOrder>				// UE - Order in chapter list
+		<Fields>								// Fields in edit chapter interface
+			<Field_SuppressChapterTitle>0</Field_SuppressChapterTitle>	// UE - 0 or 1 based on check box
+			<Field_SuppressChapterBreak>0</Field_SuppressChapterBreak>	// UE - 0 or 1 based on check box
+			<Field_UseLatexChapterTitle>0</Field_UseLatexChapterTitle>	// UE - 0 or 1 based on check box
+		</Fields>
+		<Type>0</Type>							// UE - 0 or 1 if it is unused or not (0 = normal, 1 = unused)
+		<ChapterType>0</ChapterType>			// UE - Changes by using chapter type from right click (0=normal or unused, 1=notes, 2=todo)
+		<Scenes>
+			<ScID>2</ScID>
+			<ScID>3</ScID>
+			<ScID>1</ScID>
+			<ScID>4</ScID>
+			<ScID>5</ScID>
+		</Scenes>
+	</CHAPTER>
+
+	<CHAPTER>
+		<ID>2</ID>
+		<Title><![CDATA[Chapter 2]]></Title>
+		<SortOrder>2</SortOrder>
+		<Type>0</Type>
+		<ChapterType>0</ChapterType>
+		<Scenes>
+			<ScID>7</ScID>
+			<ScID>8</ScID>
+			<ScID>9</ScID>
+		</Scenes>
+	</CHAPTER>
+	
+	<CHAPTER>
+		<ID>11</ID>
+		<Title><![CDATA[Trash]]></Title>
+		<Desc><![CDATA[This chapter was created automatically to hold deleted scenes.]]></Desc>
+		<Unused>-1</Unused>
+		<SortOrder>11</SortOrder>
+		<Fields>
+			<Field_IsTrash>1</Field_IsTrash>
+			<Field_SuppressChapterTitle>0</Field_SuppressChapterTitle>
+			<Field_SuppressChapterBreak>0</Field_SuppressChapterBreak>
+			<Field_UseLatexChapterTitle>0</Field_UseLatexChapterTitle>
+		</Fields>
+
+		<Type>1</Type>
+		<ChapterType>0</ChapterType>
+		<Scenes>
+			<ScID>6</ScID>
+		</Scenes>
+	</CHAPTER>
+
+	</CHAPTERS>
